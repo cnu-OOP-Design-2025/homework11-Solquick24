@@ -58,7 +58,7 @@ public:
 };
 
 // Decorator 기본 구조
-class equip_testmentDecorator : public Character {
+class equip_testmentDecorator : public Character {  // character 클래스 상속받음 
 protected:
     shared_ptr<Character> character;
 public:

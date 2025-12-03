@@ -1,0 +1,13 @@
+=== Test 1 ===
+Create p1 : Jack
+After move, p1 is empty
+Create p2 : Jack
+Create p3 : Kim
+Delete Student Kim
+After move, p2 is empty
+After move, p3 : Jack
+Delete Student Jack
+After p3 reset, p3 : Lee
+p3 release ownership
+raw pointer: Lee
+Delete Student Lee

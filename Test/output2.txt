@@ -1,0 +1,11 @@
+=== Test 2 ===
+p1 use_count: 1
+After copy, p1 use_count: 2
+After copy, p1 use_count: 3
+After p3 goes out of scope, p1 use_count: 2
+After p2 reset, p1 use_count: 1:Jack
+After p2 reset, p2 use_count: 1:Kim
+Delete Student Kim
+Delete Student Jack
+After p1 reset, p1 use_count: 1
+After p1 reset, p1 is nullptr

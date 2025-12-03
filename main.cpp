@@ -24,7 +24,7 @@ void equip_test2(shared_ptr<Character> c1) {
          << " | Speed: " << c1->getSpeed()
          << " | Defense: " << c1->getDefense() << endl;
 }
-
+// 소유권 이전 ( 유니크 포인터 : 포인터 가져갔을 떄 nullptr로 변경해야함 )
 void equip_test3(shared_ptr<Character> c1) {
     c1 = make_shared<Boots>(c1);
     c1 = make_shared<Staff>(c1);
@@ -40,8 +40,15 @@ void doTest3() {
     players.push_back(make_shared<Knight>());
     players.push_back(make_shared<Wizard>());
     players.push_back(make_shared<Archer>());
-    /* TODO */
-    // Zombie 캐릭터를 players에 추가
+    
+    // Zombie 캐릭터를 players에 추가 
+    players.push_back(make_shared<UndeadAdapter>(make_shared<Zombie>()));
+    players.push_back(make_shared<UndeadAdapter>(make_shared<Skeleton>()));
+    players.push_back(make_shared<UndeadAdapter>(make_shared<Lich>()));
+    // Undead 객체를 Character로 보이게 하는 어댑터(UndeadAdapter)를 만들어 
+    // Character 타입으로 래핑한 다음 players에 추가
+
+    
     // Skeleton 캐릭터를 players에 추가
     // Lich 캐릭터를 players에 추가
 
